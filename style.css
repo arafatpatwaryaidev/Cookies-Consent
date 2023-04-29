@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@200;300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-transform: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    text-decoration: none;
+}
+:root{
+    --brown:#FBB45F;
+    --white:#FFF;
+    --martin:#888;
+    --black:#333;
+}
+
+html{
+    overflow-x: hidden;
+}
+.container{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding-bottom: 60px;
+    background: var(--brown);
+}
+
+.container .open-btn{
+    background: var(--white);
+    color: var(--black);
+    border-radius: 5px;
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.2);
+    cursor: pointer;
+}
+
+.container .open-btn:hover{
+    letter-spacing: 1px;
+}
+
+.container .open-btn:active{
+    box-shadow: none;
+    transform: scale(.9);
+}
+
+.cokkies-box{
+    width: 350px;
+    position: fixed;
+    bottom: 100px; 
+    left: -400px;
+    z-index: 1000;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.2);
+    text-align: center;
+    padding: 30px;
+}
+
+.cokkies-box img{
+    height: 110px;
+    animation: image 10s linear infinite;
+}
+
+@keyframes image{
+    0%{
+        transform: rotate(360deg);
+    }
+}
+
+.cokkies-box h3{
+    font-size: 23px;
+    color: var(--black);
+    padding: 5px 0;
+}
+
+.cokkies-box p{
+    font-size: 13px;
+    color: #666;
+    padding: 5px 0;
+    line-height: 1.8;
+}
+.cokkies-box.active{
+    left: 20px;
+}
+
+.cokkies-box .accept{
+    background: var(--brown);
+    color:var(--white);
+    border-radius: 5px;
+    display: block;
+    margin:15px 0;
+    padding:10px;
+}
+
+.cokkies-box .accept:hover{
+    letter-spacing:1px;
+    opacity:.8;
+}
+
+.cokkies-box .setting{
+    color:#999;
+}
+
+.cokkies-box .setting:hover{
+    color: var(--brown);
+}
+
+.cokkies-box .close-btn{
+    position: absolute;
+    top:-2px; right:12px;
+    font-size: 40px;
+    coor:#999;
+    cursor: pointer;
+}
+.cokkies-box .close-btn:hover{
+    color: #FBB45F;
+}
